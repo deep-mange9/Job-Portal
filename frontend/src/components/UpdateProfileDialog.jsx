@@ -51,7 +51,7 @@ const UpdateProfileDialog = ({open , setOpen}) => {
         
         try{
           setLoading(true);  
-          const res = await axios.put("http://localhost:3000/api/v1/user/update" , formdata , {
+          const res = await axios.put("https://job-portal-7q1a.onrender.com/api/v1/user/update" , formdata , {
              headers : {
                 "Content-Type" : "multipart/form-data",
              },

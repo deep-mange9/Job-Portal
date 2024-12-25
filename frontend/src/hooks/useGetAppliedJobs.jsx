@@ -8,7 +8,7 @@ const useGetAppliedJobs = () => {
   useEffect(()=>{
     const getAppliedJobs = async () =>{
         try{
-            const res = await axios.get("http://localhost:3000/api/v4/application/get" , {withCredentials : true});
+            const res = await axios.get("https://job-portal-7q1a.onrender.com/api/v4/application/get" , {withCredentials : true});
             if(res?.data?.application){
                 dispatch(setAppliedJobs(res.data.application));
             }

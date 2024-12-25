@@ -10,7 +10,7 @@ const useGetAllJobs = () => {
    useEffect(()=>{
       const fetchAllJobs = async () =>{
         try{
-          const res = await axios.get(`http://localhost:3000/api/v3/job/get?keyword=${searchedQuery}` , {withCredentials : true});
+          const res = await axios.get(`https://job-portal-7q1a.onrender.com/api/v3/job/get?keyword=${searchedQuery}` , {withCredentials : true});
           if(res.data.success){
             dispatch(setAllJobs(res.data.jobs)); 
           }

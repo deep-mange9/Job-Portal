@@ -12,7 +12,7 @@ const ApplicantsTable = () => {
 
   const statusHandeler = async(status , id) =>{
     try{
-        const res = await axios.post(`http://localhost:3000/api/v4/application/status/${id}/update` , {status} , {withCredentials : true});
+        const res = await axios.post(`https://job-portal-7q1a.onrender.com/api/v4/application/status/${id}/update` , {status} , {withCredentials : true});
         if(res?.data?.success){
             toast.success(res.data.message);
         }

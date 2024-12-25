@@ -15,7 +15,7 @@ const CompanyCreate = () => {
   const dispatch = useDispatch();
   const registerNewCompany = async () =>{
     try{
-      const res = await axios.post('http://localhost:3000/api/v2/company/register' , {companyName} , {
+      const res = await axios.post('https://job-portal-7q1a.onrender.com/api/v2/company/register' , {companyName} , {
         headers : {
             "Content-Type" : 'application/json'
         },

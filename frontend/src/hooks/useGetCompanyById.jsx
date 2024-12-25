@@ -3,13 +3,13 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-const useGetCompanyById = async (companyId) => {
+const useGetCompanyById =  (companyId) => {
     const dispatch = useDispatch();
     useEffect(() => {
     const fetchSingleCompany = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/v2/company/get/${companyId}`,
+          `https://job-portal-7q1a.onrender.com/api/v2/company/get/${companyId}`,
           { withCredentials: true }
         );
         if (res.data.success) {

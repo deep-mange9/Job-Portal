@@ -14,7 +14,7 @@ const Applicants = () => {
   useEffect(()=>{
     const getAllApplicants = async() =>{
         try{
-            const res = await axios.get(`http://localhost:3000/api/v4/application/${params.id}/applicants` , {withCredentials : true});
+            const res = await axios.get(`https://job-portal-7q1a.onrender.com/api/v4/application/${params.id}/applicants` , {withCredentials : true});
             if(res?.data?.job){
                 dispatch(setAllApplicants(res.data.job));
             }
