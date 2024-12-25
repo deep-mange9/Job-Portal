@@ -6,7 +6,7 @@ import auth from "../middleware/auth.js";
 
 router.post("/post", auth , postJob);
 router.get("/get" , getJobs);
-router.get("/get/:id" , auth , getJobById);
+router.get("/get/:id" , getJobById);
 router.get("/getadminjobs" , auth , getAdminJob);
 
 
